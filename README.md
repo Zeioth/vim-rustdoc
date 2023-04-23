@@ -3,25 +3,41 @@ Out of the box, this plugin automatically regenerates your rustdoc
 documentation. Currently, this plugin is in highly experimental state.
 
 ## Dependencies
-None. Rust ships with this tool.
+None. This tool is shipped with Rust.
 
 ## Documentation
 Please use <:h rustdoc> on vim to read the [full documentation](https://github.com/Zeioth/vim-rustdoc/blob/main/doc/rustdoc.txt).
 
 ## How to use
-
-You just need to define the next keybindings (you MUST setup this)
+Copy this in your vimconfig:
 
 ```
-" Shortcuts to open and generate docs
-nmap <silent> <C-k> :<C-u>rustdocRegen<CR>
-nmap <silent> <C-h> :<C-u>rustdocOpen<CR>
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => vim rustdoc
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" Enable it for the next languages
+let g:rustdoc_include_filetypes = ['typescript']
+
+" Enable the keybindings for the languages in g:rustdoc_include_filetypes
+augroup rustdoc_mappings
+  for ft in g:rustdoc_include_filetypes
+    execute 'autocmd FileType ' . ft . ' nnoremap <buffer> <C-h> :<C-u>rustdocOpen<CR>'
+    "execute 'autocmd FileType ' . ft . ' nnoremap <buffer> <C-k> :<C-u>rustdocRegen<CR>'
+  endfor
+augroup END
 ```
+
+## Most frecuent options users customize
 
 Enable automated doc generation on save (optional)
 ```
+" Enabled by default for the languages defined in g:rustdoc_include_filetypes
 let g:rustdoc_auto_regen = 1
+```
 
+Change the way the documentation is opened (optional)
+```
 " rustdoc - Open on browser
 let g:rustdoc_browser_cmd = get(g:, 'rustdoc_browser_cmd', 'xdg-open')
 let g:rustdoc_browser_file = get(g:, 'rustdoc_browser_file', './docs/index.html')
@@ -30,7 +46,7 @@ let g:rustdoc_browser_file = get(g:, 'rustdoc_browser_file', './docs/index.html'
 Custom command to generate the rustdoc documentation (optional)
 
 ```
-let g:rustdoc_cmd = get(g:, 'rustdoc_cmd', 'rustdoc')
+let g:rustdoc_cmd = 'rustdoc'
 ```
 
 Change the way the root of the project is detected (optional)
