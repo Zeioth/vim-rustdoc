@@ -98,8 +98,8 @@ augroup end
 " Misc Commands {{{
 
 if g:rustdoc_define_advanced_commands
-    command! rustdocToggleEnabled :let g:rustdoc_enabled=!g:rustdoc_enabled
-    command! rustdocToggleTrace   :call rustdoc#toggletrace()
+    command! RustdocToggleEnabled :let g:rustdoc_enabled=!g:rustdoc_enabled
+    command! RustdocToggleTrace   :call rustdoc#toggletrace()
 endif
 
 " }}}

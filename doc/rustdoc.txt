@@ -59,7 +59,7 @@ match one of the items in |rustdoc_project_root|, create a file named
 "`.norustdoc`" at the root of the project.
 
                                                 *:rustdocRegen*
-:rustdocRegen
+:RustdocRegen
                         Manually (re)generate the rustdoc documentation.
                         This can be useful when |rustdoc_auto_regen| is set to
                         0.
@@ -69,7 +69,7 @@ match one of the items in |rustdoc_project_root|, create a file named
 Some debugging/troubleshooting commands are also available if the
 |rustdoc_define_advanced_commands| global setting is set to 1.
 
-:rustdocOpen
+:RustdocOpen
                         Opens the documentation file on the browser. Both the
                         file and the browser can be customized with
                         |rustdoc_browser_file| and |rustdoc_browser_cmd|.
@@ -82,7 +82,7 @@ Some debugging/troubleshooting commands are also available if the
 
 
                                                 *:rustdocToggleEnabled*
-:rustdocToggleEnabled
+:RustdocToggleEnabled
                         Disables and re-enables rustdoc.
                         When rustdoc is disabled, it won't (re)generate
                         rustdoc when you save a buffer. It will however still
@@ -94,7 +94,7 @@ Some debugging/troubleshooting commands are also available if the
                         |rustdoc_define_advanced_commands| is set}
 
                                                 *rustdocToggleTrace*
-:rustdocToggleTrace
+:RustdocToggleTrace
                         If you want to keep an eye on what rustdoc is doing,
                         you can enable tracing. This will show messages every
                         time rustdoc does something. It can get annoying
