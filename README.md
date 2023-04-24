@@ -17,7 +17,7 @@ Copy this in your vimconfig:
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " Enable it for the next languages
-let g:rustdoc_include_filetypes = ['typescript']
+let g:rustdoc_include_filetypes = ['rust']
 
 " Enable the keybindings for the languages in g:rustdoc_include_filetypes
 augroup rustdoc_mappings
