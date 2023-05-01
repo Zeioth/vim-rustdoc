@@ -194,9 +194,6 @@ function! rustdoc#setup_rustdoc() abort
         endif
 
         let b:rustdoc_files = {}
-        " for module in g:rustdoc_modules
-        "     call call("rustdoc#".module."#init", [b:rustdoc_root])
-        " endfor
     catch /^rustdoc\:/
         call rustdoc#trace("No rustdoc support for this buffer.")
         return
