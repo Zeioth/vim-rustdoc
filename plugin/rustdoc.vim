@@ -70,7 +70,7 @@ let g:rustdoc_cmd = get(g:, 'rustdoc_cmd', 'rustdoc ')
 
 " rustdoc - Open on browser
 let g:rustdoc_browser_cmd = get(g:, 'rustdoc_browser_cmd', 'xdg-open')
-let g:rustdoc_browser_file = get(g:, 'rustdoc_browser_file', './docs/index.html')
+let g:rustdoc_browser_file = get(g:, 'rustdoc_browser_file', '/docs/index.html')
 
 " rustdoc - Verbose
 let g:rustdoc_verbose_manual_regen = get(g:, 'rustdoc_verbose_open', '1')
