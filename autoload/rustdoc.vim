@@ -220,12 +220,6 @@ function! rustdoc#setup_rustdoc() abort
     command! -buffer -bang RustdocRegen :call s:manual_rustdoc_regen(<bang>0)
     command! -buffer -bang RustdocOpen :call s:rustdoc_open()
 
-    " Keybindings
-    "nmap <silent> <C-k> :<C-u>rustdocRegen<CR>
-    "nmap <silent> <C-h> :<C-u>rustdocOpen<CR>
-    nmap <silent> g:rustdoc_shortcut_regen . :<C-u>rustdocRegen<CR>
-    nmap <silent> g:rustdoc_shortcut_open . :<C-u>rustdocOpen<CR>
-
 endfunction
 
 " }}}
