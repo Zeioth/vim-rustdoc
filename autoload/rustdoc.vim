@@ -162,7 +162,7 @@ function! rustdoc#setup_rustdoc() abort
     endif
 
     " We only want to use vim-rustdoc in the filetypes supported by rustdoc
-    if !index(g:doxygen_include_filetypes, &filetype) >= 0
+    if index(g:rustdoc_include_filetypes, &filetype) == -1
         return
     endif
 
